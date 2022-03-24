@@ -28,6 +28,9 @@
 </head>
 <body>
 
+  <div class="loader_bg">
+    <div class="loader"></div>
+</div>
   <div class="scrollToTop-btn">
     <i class="fas fa-angle-up"></i>
   </div>
@@ -277,7 +280,12 @@
   <footer class="footer">
     <span class="footer-title">Alisher Nu'monov</span>
   </footer>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        }, 1500);
+    </script>
   <script src="script.js"></script>
   <script src="sendtelegram.js"></script>
 </body>

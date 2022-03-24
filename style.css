@@ -1,5 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
 
+.loader_bg{
+  position: fixed;
+  z-index: 999999;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+.loader{
+  border: 0 soild transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: calc(50vh - 75px);
+  left: calc(50vw - 75px);
+}
+.loader:before, .loader:after{
+  content: '';
+  border: 1em solid #0072ff;
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loader 2s linear infinite;
+  opacity: 0;
+}
+.loader:before{
+  animation-delay: .5s;
+}
+@keyframes loader{
+  0%{
+      transform: scale(0);
+      opacity: 0;
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      transform: scale(1);
+      opacity: 0;
+  }
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +69,7 @@ header {
 }
 
 header.sticky {
-  background: #6253cf;
+  background: #0072ff;
   padding: 10px 100px;
 }
 
@@ -194,7 +240,7 @@ section {
 }
 
 .typed h3 {
-  color: #6253cf;
+  color: #0072ff;
   font-size: 52px;
   font-weight: 700;
   line-height: 70px;
@@ -203,7 +249,7 @@ section {
 
 .btn {
   color: #fff;
-  background: #6253cf;
+  background: #0072ff;
   font-size: 17px;
   font-weight: 600;
   display: inline-block;
@@ -237,7 +283,7 @@ section {
 
 .section-title {
   position: relative;
-  color: #6253cf;
+  color: #0072ff;
   font-size: 38px;
   font-weight: 800;
   margin-bottom: 60px;
@@ -250,7 +296,7 @@ section {
   left: 50%;
   width: 140px;
   height: 4px;
-  background: #6253cf;
+  background: #0072ff;
   transform: translateX(-50%);
 }
 
@@ -262,7 +308,7 @@ section {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #6253cf;
+  background: #0072ff;
   transform: translateX(-50%);
 }
 
@@ -433,7 +479,7 @@ section {
 }
 
 .services .card .service-icon {
-  color: #6253cf;
+  color: #0072ff;
   font-size: 120px;
   text-align: center;
   transition: transform .5s ease;
@@ -448,7 +494,7 @@ section {
 }
 
 .services .card .info h3 {
-  color: #6253cf;
+  color: #0072ff;
   font-size: 20px;
   font-weight: 700;
   margin: 10px;
@@ -525,7 +571,7 @@ section {
 }
 
 .contact .card .contact-icon {
-  color: #6253cf;
+  color: #0072ff;
   font-size: 60px;
   text-align: center;
   transition: transform .5s ease;
@@ -585,7 +631,7 @@ section {
 
 .contact-form .input-box .send-btn {
   color: #fff;
-  background: #6253cf;
+  background: #0072ff;
   display: inline-block;
   font-size: 19px;
   font-weight: 500;
@@ -657,7 +703,7 @@ section {
   }
 
   header .navigation a:hover {
-    background: #6253cf;
+    background: #0072ff;
     color: #fff;
   }
 
@@ -733,7 +779,7 @@ section {
 .scrollToTop-btn {
   z-index: 999;
   position: fixed;
-  background: #6253cf;
+  background: #0072ff;
   color: #fff;
   width: 45px;
   height: 45px;
